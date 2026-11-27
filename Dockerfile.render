@@ -1,0 +1,26 @@
+# Build the same Flutter SDK used by CI. Only compiled web assets enter runtime.
+FROM ubuntu:24.04 AS frontend
+ARG FLUTTER_VERSION=3.44.8
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates curl git unzip xz-utils libglu1-mesa && rm -rf /var/lib/apt/lists/*
+RUN git clone --depth 1 --branch "${FLUTTER_VERSION}" https://github.com/flutter/flutter.git /opt/flutter \
+    && git config --global --add safe.directory /opt/flutter
+ENV PATH="/opt/flutter/bin:${PATH}"
+WORKDIR /src/frontend
+COPY frontend/pubspec.yaml frontend/pubspec.lock ./
+RUN flutter pub get
+COPY frontend/ ./
+RUN flutter build web --release --no-web-resources-cdn --no-pub --dart-define=API_URL= --dart-define=TEMPORARY_SERVER=true
+
+FROM python:3.11-slim
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
+WORKDIR /app
+COPY backend/requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+COPY backend/app ./app
+COPY --from=frontend /src/frontend/build/web ./web
+RUN useradd --create-home cropcare && mkdir -p /app/data /app/models && chown -R cropcare:cropcare /app
+USER cropcare
+ENV STATIC_DIR=/app/web DATABASE_URL=sqlite:////app/data/cropcare.db PORT=10000
+EXPOSE 10000
+CMD ["sh", "-c", "exec uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-10000} --workers 1 --no-proxy-headers"]

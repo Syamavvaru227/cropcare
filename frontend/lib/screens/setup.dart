@@ -183,6 +183,8 @@ class _AuthScreenState extends State<AuthScreen> {
           context.tr(register ? 'register' : 'welcome'),
           subtitle: context.tr('authNote'),
         ),
+        if (const bool.fromEnvironment('TEMPORARY_SERVER'))
+          Notice(context.tr('temporaryServer'), warning: true),
         if (register) ...[
           field(name, 'name'),
           field(mobile, 'mobile', type: TextInputType.phone),

@@ -17,6 +17,7 @@ from threading import Lock
 from fastapi import FastAPI, Depends, File, HTTPException, UploadFile, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
+from fastapi.staticfiles import StaticFiles
 from PIL import Image, ImageOps, UnidentifiedImageError
 from pydantic import BaseModel, Field
 from sqlalchemy import select, or_, delete
@@ -182,3 +183,8 @@ def remove_scan(scan_id: str, user: User = Depends(current_user), db: Session = 
         raise HTTPException(404, 'Scan not found.')
     db.delete(row)
     db.commit()
+
+# Keep API routes ahead of the web mount. Without STATIC_DIR this remains API-only.
+static_dir = os.getenv('STATIC_DIR')
+if static_dir:
+    app.mount('/', StaticFiles(directory=static_dir, html=True), name='frontend')

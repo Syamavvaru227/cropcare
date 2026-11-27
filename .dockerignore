@@ -1,0 +1,16 @@
+.git
+.env
+**/.venv
+**/__pycache__
+**/.dart_tool
+**/build
+**/.gradle
+**/local.properties
+**/key.properties
+**/*.db
+**/*.keras
+**/*.h5
+**/*.jks
+**/*.keystore
+backend/models
+artifacts

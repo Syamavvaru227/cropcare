@@ -101,6 +101,10 @@ The `.gitignore` excludes databases, environment secrets, signing keys, virtual 
 
 ## Deployment
 
+### Render: frontend and backend together
+
+The root `render.yaml` and `Dockerfile.render` deploy the Flutter frontend and FastAPI backend as one free Render web service. See [Render setup](docs/RENDER.md). This demo uses temporary SQLite storage: server accounts and scan records reset when Render restarts the service. The UI labels this limitation. Live inference still requires the original model and verified configuration.
+
 ### Frontend demo: GitHub Pages
 
 1. Push the project to GitHub.

@@ -1,5 +1,6 @@
 {
   "@@locale": "en",
+  "temporaryServer": "This free demo server uses temporary storage. Accounts and server scan records may be erased when it restarts. Guest demo history stays on your device.",
   "tagline": "Healthy Crops. Better Harvests.",
   "welcome": "A little care. A better harvest.",
   "chooseLanguage": "Choose your language",

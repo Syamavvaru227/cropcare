@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: cropcare
+    runtime: docker
+    plan: free
+    repo: https://github.com/Syamavvaru227/cropcare
+    branch: main
+    dockerfilePath: ./Dockerfile.render
+    dockerContext: .
+    healthCheckPath: /health
+    autoDeployTrigger: checksPass
+    envVars:
+      - key: PORT
+        value: '10000'
+      - key: STATIC_DIR
+        value: /app/web
+      - key: DATABASE_URL
+        value: sqlite:////app/data/cropcare.db
+      - key: CORS_ORIGINS
+        value: https://syamavvaru227.github.io

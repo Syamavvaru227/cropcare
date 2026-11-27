@@ -18,7 +18,8 @@ for path in ['frontend/assets/data/diseases.json','backend/app/data/diseases.jso
  p=ROOT/path;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8')
 
 # key | English | Telugu. ARB resources are loaded by Flutter's LocalizationsDelegate.
-rows='''tagline|Healthy Crops. Better Harvests.|ఆరోగ్యకరమైన పంటలు, మెరుగైన దిగుబడి.
+rows='''temporaryServer|This free demo server uses temporary storage. Accounts and server scan records may be erased when it restarts. Guest demo history stays on your device.|ఈ ఉచిత డెమో సర్వర్ తాత్కాలిక నిల్వను ఉపయోగిస్తుంది. సర్వర్ పునఃప్రారంభమైనప్పుడు ఖాతాలు, సర్వర్ స్కాన్ రికార్డులు తొలగిపోవచ్చు. అతిథి డెమో చరిత్ర మీ పరికరంలోనే ఉంటుంది.
+tagline|Healthy Crops. Better Harvests.|ఆరోగ్యకరమైన పంటలు, మెరుగైన దిగుబడి.
 welcome|A little care. A better harvest.|కొంచెం సంరక్షణ. మెరుగైన పంట.
 chooseLanguage|Choose your language|మీ భాషను ఎంచుకోండి
 continue|Continue|కొనసాగించు
