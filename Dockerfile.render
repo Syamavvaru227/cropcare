@@ -6,10 +6,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates
 RUN git clone --depth 1 --branch "${FLUTTER_VERSION}" https://github.com/flutter/flutter.git /opt/flutter \
     && git config --global --add safe.directory /opt/flutter
 ENV PATH="/opt/flutter/bin:${PATH}"
+RUN useradd --uid 10001 --create-home flutterbuild \
+    && mkdir -p /src/frontend \
+    && chown -R flutterbuild:flutterbuild /opt/flutter /src
+USER flutterbuild
 WORKDIR /src/frontend
-COPY frontend/pubspec.yaml frontend/pubspec.lock ./
+COPY --chown=flutterbuild:flutterbuild frontend/pubspec.yaml frontend/pubspec.lock ./
 RUN flutter pub get
-COPY frontend/ ./
+COPY --chown=flutterbuild:flutterbuild frontend/ ./
 RUN flutter build web --release --no-web-resources-cdn --no-pub --dart-define=API_URL= --dart-define=TEMPORARY_SERVER=true
 
 FROM python:3.11-slim
