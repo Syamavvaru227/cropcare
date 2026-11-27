@@ -1,0 +1,102 @@
+[
+  {
+    "id": "bacterial_spot",
+    "name": "Bacterial spot",
+    "category": "Bacterial",
+    "scientific": "Xanthomonas species",
+    "symptoms": "Small dark spots may appear on leaves.",
+    "symptoms_te": "ఆకులపై చిన్న నల్ల మచ్చలు కనిపించవచ్చు.",
+    "verified": false,
+    "source": "https://apps.extension.umn.edu/garden/diagnose/plant/vegetable/tomato/"
+  },
+  {
+    "id": "early_blight",
+    "name": "Early blight",
+    "category": "Fungal",
+    "scientific": "Alternaria species",
+    "symptoms": "Brown spots with concentric rings may begin on older leaves.",
+    "symptoms_te": "పాత ఆకులపై వలయాలతో గోధుమ మచ్చలు కనిపించవచ్చు.",
+    "verified": false,
+    "source": "https://apps.extension.umn.edu/garden/diagnose/plant/vegetable/tomato/"
+  },
+  {
+    "id": "healthy",
+    "name": "Healthy",
+    "category": "Healthy",
+    "scientific": "Solanum lycopersicum",
+    "symptoms": "No disease class detected does not rule out other crop problems.",
+    "symptoms_te": "వ్యాధి గుర్తించకపోయినా ఇతర సమస్యలు ఉండవచ్చు.",
+    "verified": false,
+    "source": "https://apps.extension.umn.edu/garden/diagnose/plant/vegetable/tomato/"
+  },
+  {
+    "id": "late_blight",
+    "name": "Late blight",
+    "category": "Oomycete",
+    "scientific": "Phytophthora infestans",
+    "symptoms": "Dark, water-soaked patches may spread across leaves.",
+    "symptoms_te": "నీటితో తడిసినట్లుగా నల్ల మచ్చలు ఆకులపై వ్యాపించవచ్చు.",
+    "verified": false,
+    "source": "https://apps.extension.umn.edu/garden/diagnose/plant/vegetable/tomato/"
+  },
+  {
+    "id": "leaf_mold",
+    "name": "Leaf mold",
+    "category": "Fungal",
+    "scientific": "Passalora fulva",
+    "symptoms": "Pale upper leaf patches may accompany mold beneath the leaf.",
+    "symptoms_te": "ఆకు పైభాగంలో లేత మచ్చలు, కింద బూజు కనిపించవచ్చు.",
+    "verified": false,
+    "source": "https://apps.extension.umn.edu/garden/diagnose/plant/vegetable/tomato/"
+  },
+  {
+    "id": "septoria",
+    "name": "Septoria leaf spot",
+    "category": "Fungal",
+    "scientific": "Septoria lycopersici",
+    "symptoms": "Small circular spots may have lighter centers.",
+    "symptoms_te": "చిన్న గుండ్రని మచ్చల మధ్య భాగం లేత రంగులో ఉండవచ్చు.",
+    "verified": false,
+    "source": "https://apps.extension.umn.edu/garden/diagnose/plant/vegetable/tomato/"
+  },
+  {
+    "id": "spider_mite",
+    "name": "Two-spotted spider mite",
+    "category": "Pest",
+    "scientific": "Tetranychus urticae",
+    "symptoms": "Fine stippling and webbing may occur.",
+    "symptoms_te": "ఆకులపై చిన్న చుక్కలు మరియు సాలెగూడు కనిపించవచ్చు.",
+    "verified": false,
+    "source": "https://apps.extension.umn.edu/garden/diagnose/plant/vegetable/tomato/"
+  },
+  {
+    "id": "target_spot",
+    "name": "Target spot",
+    "category": "Fungal",
+    "scientific": "Corynespora cassiicola",
+    "symptoms": "Brown lesions may have a target-like pattern.",
+    "symptoms_te": "గోధుమ మచ్చలు వలయాల రూపంలో కనిపించవచ్చు.",
+    "verified": false,
+    "source": "https://apps.extension.umn.edu/garden/diagnose/plant/vegetable/tomato/"
+  },
+  {
+    "id": "mosaic_virus",
+    "name": "Mosaic virus",
+    "category": "Viral",
+    "scientific": "Tomato mosaic virus",
+    "symptoms": "Mottled light and dark green leaves may be distorted.",
+    "symptoms_te": "ఆకులపై లేత, ముదురు ఆకుపచ్చ మచ్చలు మరియు వంకరలు కనిపించవచ్చు.",
+    "verified": false,
+    "source": "https://apps.extension.umn.edu/garden/diagnose/plant/vegetable/tomato/"
+  },
+  {
+    "id": "yellow_leaf_curl",
+    "name": "Yellow leaf curl virus",
+    "category": "Viral",
+    "scientific": "Tomato yellow leaf curl virus",
+    "symptoms": "Yellowing, curled leaves and stunting may occur.",
+    "symptoms_te": "ఆకులు పసుపు రంగులోకి మారడం, ముడుచుకోవడం, పెరుగుదల తగ్గడం కనిపించవచ్చు.",
+    "verified": false,
+    "source": "https://apps.extension.umn.edu/garden/diagnose/plant/vegetable/tomato/"
+  }
+]

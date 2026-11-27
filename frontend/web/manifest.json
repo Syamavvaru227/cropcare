@@ -1,0 +1,19 @@
+{
+  "name": "CropCare",
+  "short_name": "CropCare",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#F8F5EA",
+  "theme_color": "#214E34",
+  "description": "Healthy Crops. Better Harvests.",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "sizes": "any",
+      "purpose": "any maskable",
+      "src": "cropcare.svg",
+      "type": "image/svg+xml"
+    }
+  ]
+}
